@@ -4,8 +4,8 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:padding="24dp">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/divider"
@@ -26,13 +26,15 @@
             android:textAlignment="center"
             android:textStyle="bold"
             android:gravity="center"
+            android:textColor="@color/surface"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="32dp"/>
 
+        <!-- This button will now be for "Workout Log" when logged in -->
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonPrimaryAction"
             android:text="Login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,11 +44,11 @@
             android:layout_marginTop="16dp"/>
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonRegisterOrProfile"
             android:text="Register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/buttonLogin"
+            app:layout_constraintTop_toBottomOf="@id/buttonPrimaryAction"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"/>
@@ -56,11 +58,11 @@
             android:text="Log Out"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/buttonRegister"
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterOrProfile"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/> <!-- Initially gone -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
